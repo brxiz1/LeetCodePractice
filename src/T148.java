@@ -79,48 +79,14 @@ class Solution148{
                     prevHead1 = prevHead1.next;
                 }
                 corr=next;
-//
-//                for(int j=0;j<nowLength*2;j++){
-//                    prevHead1=prevHead1.next;
-//                    if(prevHead1==null){
-//                        isFinish=true;
-//                        break;
-//                    }
-//                }
-//                if(isFinish)break;
-//
-//                head1=prevHead1.next;
-//                if(head1==null){
-//                    break;
-//                }
-//
-//                head2=head1;
-//                for(int j=0;j<nowLength;j++){
-//                    head2=head2.next;
-//                    if(head2==null){
-//                        isFinish=true;
-//                        break;
-//                    }
-//                }
-//                if(isFinish)break;
-////                prevHead1=head2;
-////                for(int j=1;j<nowLength;j++){
-////                    prevHead1=prevHead1.next;
-////                }
-//
+
             }
         }
         return nullHead.next;
     }
     public ListNode twoListSort(ListNode head1,ListNode head2,int length){
         ListNode resHead=new ListNode();
-//        ListNode resTail=resHead;
-//        for(int i=0;i<length*2;i++){
-//            if(resTail==null){
-//                break;
-//            }
-//            resTail=resTail.next;
-//        }
+
         ListNode checkHead=resHead;
         ListNode check1=head1;
         ListNode check2=head2;
@@ -142,24 +108,7 @@ class Solution148{
             //这可能导致成环，因为head1和head2本就在一条链表中，为此应将head1和head2截取下来后再排序
         }
         return resHead.next;
-//        ListNode dummyHead = new ListNode(0);
-//        ListNode temp = dummyHead, temp1 = head1, temp2 = head2;
-//        while (temp1 != null && temp2 != null) {
-//            if (temp1.val <= temp2.val) {
-//                temp.next = temp1;
-//                temp1 = temp1.next;
-//            } else {
-//                temp.next = temp2;
-//                temp2 = temp2.next;
-//            }
-//            temp = temp.next;
-//        }
-//        if (temp1 != null) {
-//            temp.next = temp1;
-//        } else if (temp2 != null) {
-//            temp.next = temp2;
-//        }
-//        return dummyHead.next;
+
 
     }
 }
